@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Yoga Studio",
+    "liveLink": "https://my-yoga-app.netlify.app",
+    "imageSrc": "https://i.ibb.co.com/gZtm3bbf/project-1.png",
+    "altText": "Yoga Studio Project Screenshot"
+  },
+  {
+    "id": 2,
+    "title": "Furniture E-Commerce",
+    "liveLink": "https://my-furniture-web.netlify.app",
+    "imageSrc": "https://i.ibb.co.com/XvSBttB/Project-2.png",
+    "altText": "Furniture Web Project Screenshot"
+  },
+  {
+    "id": 3,
+    "title": "Gaming Magazine",
+    "liveLink": "https://my-gaming-app.netlify.app",
+    "imageSrc": "https://i.ibb.co.com/QvqgRC22/Project-3.png",
+    "altText": "Gaming App Project Screenshot"
+  },
+  {
+    "id": 4,
+    "title": "Untapped Solutions CRM",
+    "liveLink": "https://my-crm-website.netlify.app",
+    "imageSrc": "https://i.ibb.co.com/XfTjHCcY/Project-4.png",
+    "altText": "CRM Website Project Screenshot"
+  }
+]
