@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+<<<<<<< HEAD
 body{
     overflow-x: hidden;
+=======
+
+html,body{
+  overflow-x:hidden;
+>>>>>>> dfedb201e9df2df1d15adc1737a8474d5c179d08
 }
