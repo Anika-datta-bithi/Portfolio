@@ -8,17 +8,33 @@ import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
 
 const Home = () => {
-    return (
-        <div>
-            <Navbar/>
-            <Hero/>
-            <Education/>
-            <Project/>
-            <Skill/>
-            <Contact/>
-            <Footer/>
-        </div>
-    );
+  return (
+    <div>
+      <Navbar />
+
+      <section id="navbar">
+        <Hero />
+      </section>
+
+      <section id="education">
+        <Education />
+      </section>
+
+      <section id="projects">
+        <Project />
+      </section>
+
+      <section id="skills">
+        <Skill />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
+
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;

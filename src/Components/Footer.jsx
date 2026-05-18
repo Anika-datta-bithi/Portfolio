@@ -1,33 +1,31 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaLinkedinIn, FaEnvelope, FaChevronUp } from 'react-icons/fa';
+import IconRingLogo from './IconRing';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const handleScrollToNavbar = (e) => {
-    e.preventDefault(); // Stops Chrome from just adding #navbar to the URL box
-    
-    // Looks for the element with id="navbar"
+    e.preventDefault();
     const navbarElement = document.getElementById('navbar');
     
     if (navbarElement) {
-      // Direct command telling Chrome to scroll smoothly right to the element
       navbarElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-      // Backup safety plan: if it can't find the ID, scroll to the absolute top of the screen
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   return (
-    <footer className="relative w-full bg-gray-50 font-sans text-gray-800 border-t border-gray-200 py-12 px-4 m-0 transition-colors duration-300">
+    <footer className="relative overflow-hidden w-full bg-gray-50 font-sans text-gray-800 border-t border-gray-200 py-12 px-4 m-0 transition-colors duration-300">
       
       {/* Safe Scroll Arrow Button */}
       <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
         <button
           onClick={handleScrollToNavbar}
           aria-label="Scroll back to Navbar"
-          className="p-3 bg-gray-900 text-white rounded-full transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg flex items-center justify-center border border-gray-200 hover:bg-gray-800 group cursor-pointer"
+          className="p-3 mt-6 bg-gray-900 text-white rounded-full transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg flex items-center justify-center border border-gray-200 hover:bg-gray-800 group cursor-pointer"
         >
           <FaChevronUp className="text-sm transition-transform duration-300 group-hover:-translate-y-0.5" />
         </button>
@@ -35,11 +33,17 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-6 md:flex-row mt-4">
         
-        {/* Left Side: Brand Name / Initials */}
+        {/* Left Side: Brand Logo + Name Layout */}
         <div className="flex flex-col items-center md:items-start">
-          <span className="text-xl font-black uppercase tracking-[0.25em] text-gray-900">
-            Anika Datta Bithi
-          </span>
+          <div className="flex items-center text-xl font-black uppercase tracking-[0.25em]">
+            
+           <IconRingLogo/>
+
+            {/* Brand Word Mark */}
+            <span className="text-blue-600">Anika</span>
+            <span className="text-gray-900 ml-2">Datta Bithi</span>
+            
+          </div>
           <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mt-1">
             Frontend Web Developer
           </p>
@@ -69,10 +73,10 @@ export default function Footer() {
         {/* Right Side: Copyright line */}
         <div className="text-center md:text-right">
           <p className="text-sm font-bold tracking-wide text-gray-900 uppercase">
-            &copy; {currentYear} by Anika Datta Bithi
+           - by Anika Datta Bithi
           </p>
           <p className="text-[10px] tracking-widest text-gray-400 font-semibold uppercase mt-0.5">
-            All Rights Reserved
+             {currentYear}
           </p>
         </div>
 

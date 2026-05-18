@@ -64,7 +64,7 @@ const itemVariants = {
 
 export default function Skill() {
   return (
-    <section className="py-20 px-4 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section className="py-20 px-4 overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         
         {/* Section Heading */}

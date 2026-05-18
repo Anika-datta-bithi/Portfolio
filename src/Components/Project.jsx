@@ -32,7 +32,7 @@ export default function Project() {
   }
 
   return (
-    <section className="py-16 px-4 bg-gray-50 dark:bg-gray-900">
+    <section className="py-16 px-4 overflow-hidden bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Heading */}

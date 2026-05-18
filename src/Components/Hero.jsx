@@ -5,7 +5,7 @@ import { FiArrowRight, FiMonitor } from 'react-icons/fi';
 
 const Hero = () => {
   return (
-    <section className="relative w-full my-20 bg-[#FDFDFD] flex items-center lg:mx-5 overflow-hidden pt-20 md:pt-0">
+    <section className="relative overflow-hidden w-full my-20 bg-[#FDFDFD] flex justify-center  pt-20 md:pt-0">
       <div className="container  grid grid-cols-1 md:grid-cols-2 gap-20 items-center h-full">
 
         {/* Left Side: Text Content */}

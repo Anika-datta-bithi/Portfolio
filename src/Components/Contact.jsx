@@ -17,7 +17,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative w-full bg-gray-500 font-sans text-neutral-900 py-20 px-4 m-0">
+    <section className="relative overflow-hidden w-full bg-gray-500 font-sans text-neutral-900 py-20 px-4 m-0">
       <div className="max-w-5xl mx-auto">
         
         {/* Section Title */}

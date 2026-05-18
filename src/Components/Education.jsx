@@ -30,7 +30,7 @@ const Education = () => {
 
   return (
     /* Background set to a solid standard mid-gray using Tailwind's gray-500 */
-    <div className="relative w-full bg-gray-500 font-sans text-neutral-900 overflow-x-hidden m-0 p-0">
+    <div className="relative overflow-hidden w-full bg-gray-500 font-sans text-neutral-900 overflow-x-hidden m-0 p-0">
       
       {/* Header - Centered precisely */}
       <div className="w-full flex flex-col items-center pt-16 mb-12">
