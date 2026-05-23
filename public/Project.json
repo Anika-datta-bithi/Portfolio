@@ -26,5 +26,27 @@
     "liveLink": "https://my-crm-website.netlify.app",
     "imageSrc": "https://i.ibb.co.com/XfTjHCcY/Project-4.png",
     "altText": "CRM Website Project Screenshot"
+  },
+  {
+    "id": 1,
+    "title": "WeddingDir Marketplace",
+    "liveLink": "https://wedding-cake-web.netlify.app/",
+    "imageSrc": "https://i.ibb.co.com/RVDtf5Y/image.png",
+    "altText": "WeddingDir Wedding Directory Mobile View"
+  },
+  {
+    "id": 6,
+    "title": "Nutritionist Platform",
+    "liveLink": "https://nutrition-web-my.netlify.app/",
+    "imageSrc": "https://i.ibb.co.com/m51CN7HN/image.png",
+    "altText": "Nutritionist Website Mobile Menu View"
+  }
+  ,
+  {
+    "id": 7,
+    "title": "Affiliate Marketing Web",
+    "imageSrc": "https://i.ibb.co.com/qYxpRm47/image.png",
+    "altText": "Affiliate Marketing Site Preview",
+    "liveLink": "https://affiliate-marketing-web.netlify.app/"
   }
 ]

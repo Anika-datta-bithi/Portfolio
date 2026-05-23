@@ -5,7 +5,6 @@ export default function Project() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch data from Project.json located in the public folder
     fetch('/Project.json')
       .then((response) => {
         if (!response.ok) {
@@ -37,41 +36,41 @@ export default function Project() {
         
         {/* Section Heading */}
         <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12 tracking-wide">
-          The Project
+          My Projects
         </h2>
 
-        {/* Responsive Grid Row (1 row on desktops, stacks cleanly on mobile) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Responsive Layout Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-start">
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="group relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-2xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col mx-auto w-full max-w-[280px]"
             >
-              {/* Clickable Image Linking to Live Site */}
+              {/* Clickable Mobile Frame Image - Hardcoded Link Applied Here */}
               <a 
-                href={project.liveLink} 
+                href="https://affiliate-marketing-web.netlify.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block aspect-[3/4] w-full overflow-hidden"
+                className="block aspect-[9/19] w-full overflow-hidden relative bg-gray-100 dark:bg-gray-950"
               >
                 <img 
                   src={project.imageSrc} 
                   alt={project.altText} 
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
                 
                 {/* Hover Overlay Effect */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="bg-white/90 text-gray-900 px-4 py-2 rounded-full font-medium text-sm shadow-md">
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2">
+                  <span className="bg-white text-gray-900 px-4 py-2 rounded-full font-semibold text-xs tracking-wide shadow-md transition-transform duration-300 translate-y-2 group-hover:translate-y-0">
                     View Live Site ↗
                   </span>
                 </div>
               </a>
 
               {/* Project Info Footer */}
-              <div className="p-4 text-center">
-                <h3 className="font-semibold text-lg text-gray-800 dark:text-white truncate">
+              <div className="p-4 text-center border-t border-gray-100 dark:border-gray-700/50 bg-white dark:bg-gray-800">
+                <h3 className="font-bold text-base text-gray-800 dark:text-white truncate">
                   {project.title}
                 </h3>
               </div>

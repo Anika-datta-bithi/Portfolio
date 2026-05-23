@@ -47,7 +47,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScrollSpy);
     return () => window.removeEventListener("scroll", handleScrollSpy);
   }, []);
-
   return (
     <nav className="fixed top-0 w-full bg-white shadow z-50">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">

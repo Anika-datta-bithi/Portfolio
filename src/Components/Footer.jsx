@@ -76,7 +76,7 @@ export default function Footer() {
            - by Anika Datta Bithi
           </p>
           <p className="text-[10px] tracking-widest text-gray-400 font-semibold uppercase mt-0.5">
-             {currentYear}
+             {}
           </p>
         </div>
 

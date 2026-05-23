@@ -29,8 +29,8 @@ const Education = () => {
   ];
 
   return (
-    /* Background set to a solid standard mid-gray using Tailwind's gray-500 */
-    <div className="relative overflow-hidden w-full bg-gray-500 font-sans text-neutral-900 overflow-x-hidden m-0 p-0">
+    /* Background updated cleanly to white */
+    <div className="relative overflow-hidden w-full bg-white font-sans text-neutral-900 overflow-x-hidden m-0 p-0">
       
       {/* Header - Centered precisely */}
       <div className="w-full flex flex-col items-center pt-16 mb-12">
@@ -43,7 +43,7 @@ const Education = () => {
       <div className="relative w-full max-w-[100vw] flex flex-col items-center">
         
         {/* Center Vertical Crisp Dark Line */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-neutral-900/40 to-transparent transform -translate-x-1/2"></div>
+        <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-neutral-900/20 to-transparent transform -translate-x-1/2"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
           {educationData.map((edu, index) => (
@@ -58,12 +58,14 @@ const Education = () => {
               {/* Year Badge and Dot */}
               <div className={`flex items-center mb-4 ${
                 index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              } justify-center md:justify-start`}>
+              } justify-center md:justify-start`}
+              >
                 
                 {/* Connecting Dot to Center Line */}
-                <div className={`hidden md:block absolute w-3.5 h-3.5 bg-neutral-900 rounded-full shadow-[0_0_8px_rgba(0,0,0,0.3)] z-10 top-[3.4rem] ${
+                <div className={`hidden md:block absolute w-3.5 h-3.5 bg-neutral-900 rounded-full shadow-[0_0_8px_rgba(0,0,0,0.15)] z-10 top-[3.4rem] ${
                   index % 2 === 0 ? '-right-[7px]' : '-left-[7px]'
-                }`}></div>
+                }`}
+                ></div>
 
                 {/* Highly Visible Year Badge */}
                 <span className="text-lg font-black bg-neutral-900 text-white px-6 py-1 rounded-sm transform -skew-x-12 shadow-md">
@@ -76,16 +78,18 @@ const Education = () => {
                 <h3 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-1 leading-tight uppercase tracking-tight">
                   {edu.degree}
                 </h3>
-                <p className="text-neutral-100 text-lg md:text-xl italic font-medium mb-4drop-shadow-sm">
+                {/* Text color switched to a readable neutral tone for the white bg */}
+                <p className="text-neutral-600 text-lg md:text-xl italic font-medium mb-4 drop-shadow-sm">
                   {edu.institution}
                 </p>
                 
                 {/* Status Bar */}
                 <div className={`flex items-center gap-3 justify-center ${
                   index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'
-                }`}>
-                  <div className="w-12 h-[1px] bg-neutral-900/40"></div>
-                  <span className="text-[10px] tracking-[0.25em] text-neutral-800 font-bold uppercase">
+                }`}
+                >
+                  <div className="w-12 h-[1px] bg-neutral-900/20"></div>
+                  <span className="text-[10px] tracking-[0.25em] text-neutral-500 font-bold uppercase">
                     {edu.status}
                   </span>
                 </div>

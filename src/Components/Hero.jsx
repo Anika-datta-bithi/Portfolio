@@ -1,12 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiMonitor } from 'react-icons/fi';
-
+// Tech icons for the foreground spinner
+import { FaReact, FaGithub, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
+import { SiTailwindcss, SiFramer } from 'react-icons/si';
 
 const Hero = () => {
+  // Define the tech stack icons in the spinner ring
+  const techIcons = [
+    { icon: <FaReact className="text-[#61DAFB]" />, name: "React" },
+    { icon: <SiFramer className="text-black" />, name: "Framer" },
+    { icon: <FaGithub className="text-[#181717]" />, name: "GitHub" },
+    { icon: <FaJsSquare className="text-[#F7DF1E]" />, name: "JavaScript" },
+    { icon: <FaHtml5 className="text-[#E34F26]" />, name: "HTML5" },
+    { icon: <FaCss3Alt className="text-[#1572B6]" />, name: "CSS3" },
+    { icon: <SiTailwindcss className="text-[#06B6D4]" />, name: "Tailwind" },
+  ];
+
   return (
-    <section className="relative overflow-hidden w-full my-20 bg-[#FDFDFD] flex justify-center  pt-20 md:pt-0">
-      <div className="container  grid grid-cols-1 md:grid-cols-2 gap-20 items-center h-full">
+    <section className="relative overflow-hidden w-full my-20 bg-[#FDFDFD] flex justify-center pt-20 md:pt-0">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-20 items-center h-full">
 
         {/* Left Side: Text Content */}
         <motion.div
@@ -39,18 +52,18 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center gap-3 mt-12 opacity-70 hover:opacity-100 transition-opacity">
-
             <a
               href="https://dribbble.com/anikadatta"
               className="text-gray-600 font-medium hover:text-black transition-colors"
             >
-
             </a>
           </div>
         </motion.div>
 
-        {/* Right Side: Desktop Website Mockup */}
+        {/* Right Side: Desktop Website Mockup with Foreground Spinner */}
         <div className="relative flex justify-center items-center order-1 md:order-2 py-10">
+          
+          {/* 1. Desktop Content Mockup Container (Sits at standard z-10 index) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -104,6 +117,40 @@ const Hero = () => {
             <div className="absolute -top-10 -left-10 w-32 h-32 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" />
             <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-700" />
           </motion.div>
+
+          {/* 2. FOREGROUND MOVING TECH SPINNER (z-30 places it directly in front of the frame) */}
+          <div className="absolute inset-0 flex justify-center items-center pointer-events-none select-none z-30">
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+              className="relative w-[420px] h-[420px] sm:w-[500px] sm:h-[500px] md:w-[540px] md:h-[540px] border border-dashed border-gray-200/40 rounded-full flex justify-center items-center"
+            >
+              {techIcons.map((item, index) => {
+                const totalIcons = techIcons.length;
+                const angle = (index * 360) / totalIcons; 
+                return (
+                  <div
+                    key={index}
+                    className="absolute w-12 h-12 sm:w-14 sm:h-14 flex justify-center items-center"
+                    style={{
+                      transform: `rotate(${angle}deg) translateY(-210px) rotate(-${angle}deg)`,
+                    }}
+                  >
+                    {/* Floating round white badges containing technology logos */}
+                    <motion.div
+                      animate={{ rotate: -360 }}
+                      transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+                      className="w-12 h-12 sm:w-14 sm:h-14 bg-white/95 backdrop-blur-xs shadow-[0_12px_40px_rgba(0,0,0,0.12)] border border-gray-100/80 rounded-full flex justify-center items-center text-xl sm:text-2xl"
+                    >
+                      {item.icon}
+                    </motion.div>
+                  </div>
+                );
+              })}
+            </motion.div>
+          </div>
+          {/* --- END FOREGROUND SPINNER --- */}
+
         </div>
       </div>
 
