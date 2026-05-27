@@ -32,7 +32,7 @@ const Hero = () => {
             <h1 className="text-4xl text-left sm:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
               Hey, This is <br />
               <span className="text-gray-800">Anika </span>
-              <span className="text-[#D97706]">Datta</span>
+              <span className="text-gray-800">Datta</span>
               <span className="text-gray-800"> Bithi</span>
             </h1>
             <p className="text-lg text-left md:text-xl text-gray-500 font-medium">
