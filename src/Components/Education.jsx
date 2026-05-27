@@ -35,8 +35,8 @@ const Education = () => {
       
       {/* Header - Centered precisely */}
       <div className="w-full flex flex-col items-center pt-16 mb-12">
-        <h2 className="text-xl font-bold uppercase tracking-[0.5em] text-neutral-900 border-b-2 border-neutral-900/30 pb-1">
-          Education
+        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12 tracking-wide">
+          My Education
         </h2>
       </div>
 

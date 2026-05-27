@@ -21,11 +21,9 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto">
         
         {/* Section Title */}
-        <div className="w-full flex flex-col items-center mb-16">
-          <h2 className="text-xl font-bold uppercase tracking-[0.5em] text-neutral-900 border-b-2 border-neutral-900/30 pb-1">
-            Get In Touch
-          </h2>
-        </div>
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12 tracking-wide">
+          Get In Touch
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           
